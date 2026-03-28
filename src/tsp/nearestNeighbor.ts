@@ -16,6 +16,16 @@ export function nearestNeighbor(matrix: number[][]): number {
         next = j;
       }
     }
+       cost += min;
+    current = next;
+    visited[current] = true;
+  }
+
+  cost += matrix[current][0];
+
+  return cost;
+}
+
 
  
-}
+
