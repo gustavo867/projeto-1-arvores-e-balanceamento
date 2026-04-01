@@ -4,7 +4,7 @@ export function nearestNeighbor(matrix: number[][]): number {
 
   let current = 0;
   visited[current] = true;
-  et cost = 0;
+  let cost = 0;
 
   for (let i = 0; i < n - 1; i++) {
     let next = -1;
@@ -16,7 +16,8 @@ export function nearestNeighbor(matrix: number[][]): number {
         next = j;
       }
     }
-       cost += min;
+
+    cost += min;
     current = next;
     visited[current] = true;
   }
@@ -25,7 +26,3 @@ export function nearestNeighbor(matrix: number[][]): number {
 
   return cost;
 }
-
-
- 
-
